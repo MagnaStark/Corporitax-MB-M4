@@ -1,0 +1,30 @@
+header{
+    .logo{
+        width: auto;
+        height: 80px;
+    }
+    nav{
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li{
+                .nav-item{
+                    padding-bottom: 20px !important;
+                    padding-top: 20px !important;
+                    .nav-link{
+                        background-color: red !important;
+                        
+                        border-radius: 2px !important;
+                       
+                        
+                    }
+                }
+                
+                }
+            }
+        }
+    }    
+
+    
