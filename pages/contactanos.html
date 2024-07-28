@@ -7,87 +7,213 @@
     <title>Contáctanos</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-<div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-0">
-
-        <a href="/"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap" />
-            </svg>
-            <img src="../resource/logo_header.png" alt="Logo de la pagina" class="logo">
-        </a>
-
-        <ul class="nav nav-pills nav-justified">
-            <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
-            <li class="nav-item"><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
-            <li class="nav-item"><a href="./servicios.html" class="nav-link">Servicios</a></li>
-            <li class="nav-item"><a href="./contenido.html" class="nav-link">Contenido</a></li>
-            <li class="nav-item"><a href="./contactanos.html" class="nav-link active"
-                    aria-current="page">Contáctanos</a></li>
-        </ul>
+    <!-- Encabezado -->
+    <header>
+        <!-- Barra de Navegacion -->
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block"></span>
+                    <a class="navbar-brand d-none d-lg-inline-block" href="#"></a>
+                    <img src="../resource/logo_header.png" alt="logo" class="logo">
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#myNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ms-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link m-2 menu-item nav-active">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./nosotros.html" class="nav-link m-2 menu-item">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./servicios.html" class="nav-link m-2 menu-item">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contenido.html" class="nav-link m-2 menu-item">Contenido</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contactanos.html" class="nav-link m-2 menu-item" class="prueba">Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-</div>
 
-<main>
+    <main>
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="wrapper">
+                            <div class="row no-gutters mb-5">
+                                <div class="col-md-7">
+                                    <div class="contact-wrap w-100 p-md-5 p-4">
+                                        <h3 class="mb-4">Contáctanos</h3>
+                                        <div id="form-message-warning" class="mb-4"></div>
+                                        <div id="form-message-success" class="mb-4">
+                                            Your message was sent, thank you!
+                                        </div>
+                                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="name">Nombre Completo</label>
+                                                        <input type="text" class="form-control" name="name" id="name"
+                                                            placeholder="Nombre">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="email">Correo Electrónico</label>
+                                                        <input type="email" class="form-control" name="email" id="email"
+                                                            placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="subject">Asunto</label>
+                                                        <input type="text" class="form-control" name="subject"
+                                                            id="subject" placeholder="Asunto">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="#">Mensaje</label>
+                                                        <textarea name="message" class="form-control" id="message"
+                                                            cols="30" rows="4" placeholder="Mensaje"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="submit" value="Envianos un mensaje"
+                                                            class="btn btn-primary">
+                                                        <div class="submitting"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 d-flex align-items-stretch">
+                                    <div id="map">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Dirección:</span> 198 West 21th Street, Suite 721 New York NY 10016
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Telefono:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Correo electrónico:</span> <a
+                                                    href="/cdn-cgi/l/email-protection#7e171018113e07110b0c0d170a1b501d1113"><span
+                                                        class="__cf_email__"
+                                                        data-cfemail="91f8fff7fed1e8fee4e3e2f8e5f4bff2fefc">[email&#160;protected]</span></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-globe"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Nuestro sitio Web</span> <a href="#">yoursite.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+</body>
 </main>
 <div class="container2">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
-      <div class="col mb-3">
-        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-          <img src="../resource/imagotipo_rojo.png" alt="Logo pie de pagina" class="logofooter">
-        </a>
-        <p class="text-body-secondary">&copy;Corporitax 2024</p>
-      </div>
-  
-      <div class="col mb-3">
-  
-      </div>
-  
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Inicio</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-  
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-  
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
+        <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                <img src="../resource/imagotipo_rojo.png" alt="Logo pie de pagina" class="logofooter">
+            </a>
+            <p class="rights text-body-secondary">&copy;Corporitax 2024</p>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+
+        <div class="links col mb-3">
+            <h5>Links</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="../index.html" class="nav-link p-0 text-body-secondary">Inicio</a>
+                </li>
+                <li class="nav-item mb-2"><a href="./nosotros.html"
+                        class="nav-link p-0 text-body-secondary">Nosotros</a></li>
+                <li class="nav-item mb-2"><a href="./servicios.html"
+                        class="nav-link p-0 text-body-secondary">Servicios</a></li>
+                <li class="nav-item mb-2"><a href="./contenido.html"
+                        class="nav-link p-0 text-body-secondary">Contenido</a></li>
+                <li class="nav-item mb-2"><a href="./contactanos.html"
+                        class="nav-link p-0 text-body-secondary">Contáctanos</a></li>
+            </ul>
+        </div>
     </footer>
-  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"rayId":"8a9d70060f0ba536","serverTiming":{"name":{"cfL4":true}},"version":"2024.7.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
     crossorigin="anonymous"></script>
 </body>
 
