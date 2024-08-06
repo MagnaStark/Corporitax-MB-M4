@@ -27,7 +27,7 @@ main .contimageninicio {
   position: relative;
   width: 100%;
   height: 900px;
-  background-image: url("https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("https://img.freepik.com/foto-gratis/vista-aerea-equipo-empresarial_53876-124515.jpg?t=st=1722913988~exp=1722917588~hmac=2e36677dbad1b872c55ca8aaab00b8e1432778b3af8ad01530a0fd2a616dbb18&w=1380");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -91,6 +91,10 @@ main .work {
     main .work .clearfix .responsive-img {
       max-width: 100%;
       height: auto; }
+
+main .responsive-img {
+  max-width: 100%;
+  height: auto; }
 
 .container2 {
   background-color: #73243c;
